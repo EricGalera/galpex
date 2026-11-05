@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <title>GALPEX</title>
+  <!-- G cuadrada: el trazo horizontal ámbar es la "línea de último precio" que sale del gráfico -->
+  <path d="M24 7H7v18h17v-8" stroke="currentColor" stroke-width="3.6" stroke-linecap="square"/>
+  <path d="M15 17h15" stroke="#E8A33A" stroke-width="3.6" stroke-linecap="square"/>
+</svg>

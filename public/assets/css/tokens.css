@@ -1,0 +1,114 @@
+/* ==========================================================================
+   GALPEX · Tokens de diseño
+   Mesa de bróker: barra azul marino, superficie blanca de trabajo, azul para
+   las acciones y verde/rojo reservados para las variaciones de precio.
+   ========================================================================== */
+
+@font-face { font-family: "Plex Sans"; src: url("../fonts/IBMPlexSans-Regular-Latin1.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Plex Sans"; src: url("../fonts/IBMPlexSans-Medium-Latin1.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Plex Sans"; src: url("../fonts/IBMPlexSans-SemiBold-Latin1.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Plex Mono"; src: url("../fonts/IBMPlexMono-Regular-Latin1.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Plex Mono"; src: url("../fonts/IBMPlexMono-Medium-Latin1.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+
+:root {
+  /* Barra superior (igual en ambos temas) */
+  --navy: #0f2742;
+  --navy-2: #183a5f;
+  --navy-line: #24496f;
+  --navy-text: #c9d6e5;
+  --navy-text-strong: #ffffff;
+
+  /* Superficies (tema claro, predeterminado) */
+  --bg: #eef1f5;
+  --bg-raised: #ffffff;
+  --bg-sunken: #f5f7fa;
+  --bg-hover: #f1f5fa;
+  --bg-active: #e4ebf4;
+  --line: #dde3eb;
+  --line-strong: #c3ccd8;
+
+  /* Texto */
+  --text: #14202e;
+  --text-2: #4d5c6f;
+  --text-3: #7b889a;
+
+  /* Acción principal: azul de bróker */
+  --brand: #0b5fbf;
+  --brand-strong: #084c99;
+  --brand-ink: #ffffff;
+  --brand-soft: rgba(11, 95, 191, 0.08);
+
+  /* Variaciones de precio */
+  --up: #0a7d48;
+  --up-soft: rgba(10, 125, 72, 0.09);
+  --down: #c62f2f;
+  --down-soft: rgba(198, 47, 47, 0.08);
+  --info: #3a6ea5;
+  --warn: #a86400;
+  --focus: #0b5fbf;
+
+  /* Serie de colores para gráficos (no se usan para texto) */
+  --c1: #0b5fbf; --c2: #2b98a4; --c3: #7458c2; --c4: #d48a1e;
+  --c5: #5c8a38; --c6: #b04d78; --c7: #6b7a8c; --c8: #9e8858;
+
+  /* Tipografía: Plex Sans tiene cifras tabulares y dibujo técnico, sin depender de internet */
+  --font: "Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --fs-xs: 15px;
+  --fs-sm: 17px;
+  --fs-md: 19px;
+  --fs-lg: 22px;
+  --fs-xl: 26px;
+  --fs-2xl: 34px;
+
+  /* Espaciado (base 4) */
+  /* Ancho de las pantallas: se usa todo el ancho del monitor, con un margen lateral chico. */
+  --page-max: 100%;
+  --page-gutter: 20px;
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 20px; --s6: 24px; --s8: 32px;
+
+  /* Radios según jerarquía: chip < control < panel < diálogo */
+  --r-chip: 3px;
+  --r-control: 4px;
+  --r-panel: 4px;
+  --r-dialog: 8px;
+
+  --shadow-pop: 0 10px 28px rgba(15, 39, 66, 0.16), 0 0 0 1px var(--line-strong);
+  --header-h: 52px;
+  --tape-h: 34px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+
+  color-scheme: light;
+}
+
+/* Tema oscuro: azul noche, para quien opera de noche */
+:root[data-theme="dark"] {
+  --navy: #08121f;
+  --navy-2: #12233a;
+  --navy-line: #1b2d44;
+  --bg: #0c1726;
+  --bg-raised: #111f31;
+  --bg-sunken: #0a1421;
+  --bg-hover: #172a40;
+  --bg-active: #1d3350;
+  --line: #1f3149;
+  --line-strong: #2d4462;
+  --text: #e5ecf4;
+  --text-2: #a3b1c2;
+  --text-3: #6f8096;
+  --brand: #3d8eef;
+  --brand-strong: #64a6f4;
+  --brand-ink: #ffffff;
+  --brand-soft: rgba(61, 142, 239, 0.14);
+  --up: #2fbd7e;
+  --up-soft: rgba(47, 189, 126, 0.12);
+  --down: #f0625b;
+  --down-soft: rgba(240, 98, 91, 0.12);
+  --info: #8db1d8;
+  --warn: #e0a24a;
+  --focus: #64a6f4;
+  --c1: #3d8eef; --c2: #4bb6c1; --c3: #9a83e0; --c4: #e3a24a;
+  --c5: #86b35e; --c6: #d57aa2; --c7: #8796a8; --c8: #c4ae7e;
+  --shadow-pop: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--line-strong);
+  color-scheme: dark;
+}

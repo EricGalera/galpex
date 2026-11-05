@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 32" fill="none">
+  <title>GALPEX</title>
+  <path d="M24 7H7v18h17v-8" stroke="#E7E9EC" stroke-width="3.6" stroke-linecap="square"/>
+  <path d="M15 17h15" stroke="#E8A33A" stroke-width="3.6" stroke-linecap="square"/>
+  <text x="42" y="23.5" fill="#E7E9EC" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-weight="600" font-size="19" letter-spacing="2.2">GALPEX</text>
+</svg>

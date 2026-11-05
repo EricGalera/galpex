@@ -1,0 +1,25 @@
+# Secretos: nunca se suben
+.env
+storage/credenciales-admin.txt
+storage/cuenta-de-prueba.txt
+
+# Dependencias (se instalan con "composer install")
+/vendor/
+/storage/vendor.zip
+
+# Archivos generados al usar el sistema
+storage/logs/*.log
+storage/cache/*
+storage/installed.lock
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/framework/testing/*
+bootstrap/cache/*.php
+!.gitignore
+
+# Sistema operativo y editores
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,26 @@
+# GALPEX: todo el tráfico va a /public. El código, la configuración (.env),
+# los logs y la base de datos nunca quedan accesibles desde el navegador.
+Options -Indexes -MultiViews
+ServerSignature Off
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Archivos y carpetas ocultas (.env, .git, .htaccess…) y carpetas internas: prohibido.
+    RewriteRule (^|/)\. - [F,L]
+    RewriteRule ^(app|bootstrap|config|database|resources|routes|storage|tests|vendor|docs|Diagramas)(/.*)?$ - [F,L]
+    RewriteRule ^$ public/ [L]
+    RewriteRule ^(?!public/)(.*)$ public/$1 [L]
+</IfModule>
+
+# Si mod_rewrite estuviera apagado, no se sirve nada (en vez de exponer el código).
+<IfModule !mod_rewrite.c>
+    Require all denied
+</IfModule>
+
+<FilesMatch "^\.|^(artisan|composer\.json|composer\.lock)$|\.(env|ini|log|sql|md|lock|mmd|sh|bak|swp|zip)$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header unset X-Powered-By
+</IfModule>

@@ -1,0 +1,2 @@
+# Carpeta interna (logs, caché, credenciales iniciales): nunca accesible desde la web.
+Require all denied
